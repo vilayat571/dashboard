@@ -1,3 +1,206 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* index.css */
+@font-face {
+  font-family: "InterRegular";
+  src: url("./assets/fonts/static/GoogleSansFlex_120pt-Regular.ttf")
+    format("truetype");
+  font-style: normal;
+  font-display: block; /* ← swap əvəzinə */
+}
+body{
+    font-family: "InterRegular";
+}
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --crimson: #8b1a2e;
+  --dark-maroon: #3d0a14;
+  --light-crimson: #b5263f;
+  --cream: #fdf8f5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--crimson);
+  border-radius: 3px;
+}
+
+/* Animate on scroll utility */
+.aos-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.aos-fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.aos-fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.aos-fade-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.aos-fade-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.aos-fade-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.aos-fade-in {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.aos-fade-in.visible {
+  opacity: 1;
+}
+
+/* Hero slider */
+.slider-track {
+  display: flex;
+  transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Gradient overlay */
+.hero-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(61, 10, 20, 0.75) 0%,
+    rgba(139, 26, 46, 0.4) 60%,
+    transparent 100%
+  );
+}
+
+/* Map dot animation */
+@keyframes ping-slow {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 0.4;
+  }
+}
+.map-dot-ping {
+  animation: ping-slow 2s ease-in-out infinite;
+}
+
+/* Counter animation */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card hover */
+.activity-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.activity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(139, 26, 46, 0.15);
+}
+
+/* Nav link underline */
+.nav-link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: var(--crimson);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Gallery image hover */
+.gallery-img {
+  transition: transform 0.4s ease;
+}
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/* PDF card hover */
+.report-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+.report-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(139, 26, 46, 0.12);
+  border-color: var(--crimson);
+}
+
+/* Lightbox */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
