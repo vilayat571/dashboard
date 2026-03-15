@@ -57,7 +57,7 @@ const LoginPage = () => {
               type="text"
               value={username}
               onChange={e => setUsername(e.target.value)}
-              placeholder="admin"
+              placeholder="Ad.."
               required
               className="w-full bg-gray-800 border border-gray-700 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-red-600 transition-colors"
             />
@@ -110,9 +110,7 @@ const LoginPage = () => {
             )}
           </button>
 
-          <p className="text-gray-600 text-xs text-center mt-4">
-            admin / admin123
-          </p>
+ 
         </form>
       </div>
     </div>
