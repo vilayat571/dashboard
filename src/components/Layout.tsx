@@ -20,7 +20,7 @@ const Layout = () => {
         {/* Logo */}
         <div className="p-6 border-b border-gray-800">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-red-700 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-[#8b1a2f] rounded-lg flex items-center justify-center">
               <span className="text-white text-sm font-black">Y</span>
             </div>
             <div>
@@ -37,7 +37,7 @@ const Layout = () => {
             className={({ isActive }) =>
               `flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${
                 isActive
-                  ? 'bg-red-700 text-white'
+                  ? 'bg-[#8b1a2f] text-white'
                   : 'text-gray-400 hover:bg-gray-800 hover:text-white'
               }`
             }
@@ -51,7 +51,7 @@ const Layout = () => {
             className={({ isActive }) =>
               `flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${
                 isActive
-                  ? 'bg-red-700 text-white'
+                  ? 'bg-[#8b1a2f] text-white'
                   : 'text-gray-400 hover:bg-gray-800 hover:text-white'
               }`
             }
@@ -65,7 +65,7 @@ const Layout = () => {
         <div className="p-4 border-t border-gray-800">
           <button
             onClick={handleLogout}
-            className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-gray-400 hover:bg-gray-800 hover:text-red-400 transition-colors w-full"
+            className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-gray-400 hover:bg-gray-800 hover:text-[#8b1a2f] transition-colors w-full"
           >
             <LogOut size={17} />
             Çıxış

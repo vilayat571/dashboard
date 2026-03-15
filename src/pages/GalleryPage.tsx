@@ -119,7 +119,7 @@ const GalleryPage = () => {
         </div>
         <button
           onClick={openCreate}
-          className="flex items-center gap-2 bg-red-700 hover:bg-red-600 text-white px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors"
+          className="flex items-center gap-2 bg-[#8b1a2f] hover:bg[#8b1a2f text-white px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors"
         >
           <Plus size={17} />
           Yeni Şəkil
@@ -132,7 +132,7 @@ const GalleryPage = () => {
           <button
             onClick={() => setFilterCat('all')}
             className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${
-              filterCat === 'all' ? 'bg-red-700 text-white' : 'bg-gray-800 text-gray-400 hover:text-white'
+              filterCat === 'all' ? 'bg-[#8b1a2f] text-white' : 'bg-gray-800 text-gray-400 hover:text-white'
             }`}
           >
             Hamısı ({items.length})
@@ -142,7 +142,7 @@ const GalleryPage = () => {
               key={cat}
               onClick={() => setFilterCat(cat)}
               className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${
-                filterCat === cat ? 'bg-red-700 text-white' : 'bg-gray-800 text-gray-400 hover:text-white'
+                filterCat === cat ? 'bg-[#8b1a2f] text-white' : 'bg-gray-800 text-gray-400 hover:text-white'
               }`}
             >
               {cat} ({items.filter(i => i.category === cat).length})
@@ -155,7 +155,7 @@ const GalleryPage = () => {
       {loading && <div className="text-center py-20 text-gray-500">Yüklənir...</div>}
 
       {/* Error */}
-      {error && <div className="text-center py-20 text-red-400">{error}</div>}
+      {error && <div className="text-center py-20 text[#8b1a2f">{error}</div>}
 
       {/* Grid */}
       {!loading && !error && (
@@ -188,7 +188,7 @@ const GalleryPage = () => {
                 </button>
                 <button
                   onClick={() => setDeleteId(item._id)}
-                  className="w-7 h-7 bg-black/70 hover:bg-red-700 text-white rounded-lg flex items-center justify-center"
+                  className="w-7 h-7 bg-black/70 hover:bg-[#8b1a2f] text-white rounded-lg flex items-center justify-center"
                 >
                   <Trash2 size={12} />
                 </button>
@@ -217,7 +217,7 @@ const GalleryPage = () => {
                   type="text"
                   value={form.title}
                   onChange={e => setForm({ ...form, title: e.target.value })}
-                  className="w-full bg-gray-800 border border-gray-700 text-white rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-red-600"
+                  className="w-full bg-gray-800 border border-gray-700 text-white rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border[#8b1a2f"
                 />
               </div>
 
@@ -228,7 +228,7 @@ const GalleryPage = () => {
                   value={form.category}
                   onChange={e => setForm({ ...form, category: e.target.value })}
                   placeholder="məs. Afrika, Fələstin"
-                  className="w-full bg-gray-800 border border-gray-700 text-white rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-red-600"
+                  className="w-full bg-gray-800 border border-gray-700 text-white rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border[#8b1a2f"
                 />
               </div>
 
@@ -255,7 +255,7 @@ const GalleryPage = () => {
               <button
                 onClick={handleSave}
                 disabled={saving}
-                className="flex-1 bg-red-700 hover:bg-red-600 disabled:opacity-50 text-white py-2.5 rounded-xl text-sm font-semibold transition-colors flex items-center justify-center gap-2"
+                className="flex-1 bg-[#8b1a2f] hover:bg[#8b1a2f disabled:opacity-50 text-white py-2.5 rounded-xl text-sm font-semibold transition-colors flex items-center justify-center gap-2"
               >
                 {saving ? (
                   <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -272,8 +272,8 @@ const GalleryPage = () => {
       {deleteId && (
         <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4">
           <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6 w-full max-w-sm text-center">
-            <div className="w-12 h-12 bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Trash2 size={20} className="text-red-400" />
+            <div className="w-12 h-12 bg[#8b1a2f/30 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Trash2 size={20} className="text[#8b1a2f" />
             </div>
             <h3 className="text-white font-bold mb-2">Silmək istəyirsiniz?</h3>
             <p className="text-gray-500 text-sm mb-6">Bu əməliyyat geri qaytarıla bilməz</p>
@@ -286,7 +286,7 @@ const GalleryPage = () => {
               </button>
               <button
                 onClick={() => handleDelete(deleteId)}
-                className="flex-1 bg-red-700 hover:bg-red-600 text-white py-2.5 rounded-xl text-sm font-semibold transition-colors"
+                className="flex-1 bg-[#8b1a2f] hover:bg[#8b1a2f text-white py-2.5 rounded-xl text-sm font-semibold transition-colors"
               >
                 Sil
               </button>

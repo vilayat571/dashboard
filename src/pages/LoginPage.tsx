@@ -38,7 +38,7 @@ const LoginPage = () => {
 
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-14 h-14 bg-red-700 rounded-2xl mb-4">
+          <div className="inline-flex items-center justify-center w-14 h-14 bg-[#8b1a2f] rounded-2xl mb-4">
             <span className="text-white text-2xl font-black">Y</span>
           </div>
           <h1 className="text-white text-2xl font-bold">Admin Panel</h1>
@@ -98,7 +98,7 @@ const LoginPage = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-red-700 hover:bg-red-600 disabled:opacity-50 text-white font-semibold py-3 rounded-xl transition-colors flex items-center justify-center gap-2"
+            className="w-full bg-[#8b1a2f] hover:bg-red-600 disabled:opacity-50 text-white font-semibold py-3 rounded-xl transition-colors flex items-center justify-center gap-2"
           >
             {loading ? (
               <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />

@@ -119,7 +119,7 @@ const handleSave = async () => {
         </div>
         <button
           onClick={openCreate}
-          className="flex items-center gap-2 bg-red-700 hover:bg-red-600 text-white px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors"
+          className="flex items-center gap-2 bg-[#8b1a2f] hover:bg-[#8b1a2f text-white px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors"
         >
           <Plus size={17} />
           Yeni Xəbər
@@ -133,7 +133,7 @@ const handleSave = async () => {
 
       {/* Error */}
       {error && (
-        <div className="text-center py-20 text-red-400">{error}</div>
+        <div className="text-center py-20 text-[#8b1a2f">{error}</div>
       )}
 
       {/* News list */}
@@ -154,7 +154,7 @@ const handleSave = async () => {
                 <p className="text-white font-semibold text-sm truncate">{item.title}</p>
                 <p className="text-gray-500 text-xs mt-1 truncate">{item.description}</p>
                 <div className="flex items-center gap-2 mt-2">
-                  <span className="bg-red-900/40 text-red-400 text-xs px-2 py-0.5 rounded-full">
+                  <span className="bg-[#8b1a2f/40 text-[#8b1a2f text-xs px-2 py-0.5 rounded-full">
                     {item.category}
                   </span>
                   <span className="text-gray-600 text-xs">
@@ -173,7 +173,7 @@ const handleSave = async () => {
                 </button>
                 <button
                   onClick={() => setDeleteId(item._id)}
-                  className="w-9 h-9 bg-gray-800 hover:bg-red-900/40 text-gray-400 hover:text-red-400 rounded-xl flex items-center justify-center transition-colors"
+                  className="w-9 h-9 bg-gray-800 hover:bg-[#8b1a2f/40 text-gray-400 hover:text-[#8b1a2f rounded-xl flex items-center justify-center transition-colors"
                 >
                   <Trash2 size={15} />
                 </button>
@@ -205,7 +205,7 @@ const handleSave = async () => {
                   type="text"
                   value={form.title}
                   onChange={e => setForm({ ...form, title: e.target.value })}
-                  className="w-full bg-gray-800 border border-gray-700 text-white rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-red-600"
+                  className="w-full bg-gray-800 border border-gray-700 text-white rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-[#8b1a2f"
                 />
               </div>
 
@@ -215,7 +215,7 @@ const handleSave = async () => {
                   type="text"
                   value={form.category}
                   onChange={e => setForm({ ...form, category: e.target.value })}
-                  className="w-full bg-gray-800 border border-gray-700 text-white rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-red-600"
+                  className="w-full bg-gray-800 border border-gray-700 text-white rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-[#8b1a2f"
                 />
               </div>
 
@@ -225,7 +225,7 @@ const handleSave = async () => {
                   type="date"
                   value={form.date}
                   onChange={e => setForm({ ...form, date: e.target.value })}
-                  className="w-full bg-gray-800 border border-gray-700 text-white rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-red-600"
+                  className="w-full bg-gray-800 border border-gray-700 text-white rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-[#8b1a2f"
                 />
               </div>
 
@@ -235,7 +235,7 @@ const handleSave = async () => {
                   rows={4}
                   value={form.description}
                   onChange={e => setForm({ ...form, description: e.target.value })}
-                  className="w-full bg-gray-800 border border-gray-700 text-white rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-red-600 resize-none"
+                  className="w-full bg-gray-800 border border-gray-700 text-white rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-[#8b1a2f resize-none"
                 />
               </div>
 
@@ -263,7 +263,7 @@ const handleSave = async () => {
               <button
                 onClick={handleSave}
                 disabled={saving}
-                className="flex-1 bg-red-700 hover:bg-red-600 disabled:opacity-50 text-white py-2.5 rounded-xl text-sm font-semibold transition-colors flex items-center justify-center gap-2"
+                className="flex-1 bg-[#8b1a2f] hover:bg-[#8b1a2f disabled:opacity-50 text-white py-2.5 rounded-xl text-sm font-semibold transition-colors flex items-center justify-center gap-2"
               >
                 {saving ? (
                   <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -280,8 +280,8 @@ const handleSave = async () => {
       {deleteId && (
         <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4">
           <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6 w-full max-w-sm text-center">
-            <div className="w-12 h-12 bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Trash2 size={20} className="text-red-400" />
+            <div className="w-12 h-12 bg-[#8b1a2f/30 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Trash2 size={20} className="text-[#8b1a2f" />
             </div>
             <h3 className="text-white font-bold mb-2">Silmək istəyirsiniz?</h3>
             <p className="text-gray-500 text-sm mb-6">Bu əməliyyat geri qaytarıla bilməz</p>
@@ -294,7 +294,7 @@ const handleSave = async () => {
               </button>
               <button
                 onClick={() => handleDelete(deleteId)}
-                className="flex-1 bg-red-700 hover:bg-red-600 text-white py-2.5 rounded-xl text-sm font-semibold transition-colors"
+                className="flex-1 bg-[#8b1a2f] hover:bg-[#8b1a2f text-white py-2.5 rounded-xl text-sm font-semibold transition-colors"
               >
                 Sil
               </button>
