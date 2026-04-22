@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Plus, Trash2, X, Save, Pencil } from 'lucide-react'
 
-const API_URL = 'https://yardimbackend-production.up.railway.app'
+const API_URL = 'https://yardimbackend.onrender.com'
 
 interface GalleryItem {
   _id: string
