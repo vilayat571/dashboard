@@ -165,10 +165,10 @@ const GalleryPage = () => {
           {filtered.map(item => (
             <div key={item._id} className="group relative bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
 
-              {/* Image */}
+              {/* Image — item.image is already a full Cloudinary URL */}
               <div className="aspect-square">
                 <img
-                  src={`${API_URL}/uploads/${item.image}`}
+                  src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover"
                 />
